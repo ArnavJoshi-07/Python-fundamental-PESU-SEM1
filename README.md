@@ -48,6 +48,3 @@ I’ve approached these assignments not as rote exercises, but as **mini explora
 - 🕹️ Basic CLI-based calculator  
 
 ---
-
-## 📂 Repository Structure
-
