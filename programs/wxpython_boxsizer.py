@@ -1,0 +1,13 @@
+import wx
+app = wx.App()
+frame - wx.Frame(None,title='Boxsizer Example',size=(300,200))
+panel = wx.Panel(frame)
+sizer = wx.BoxSizer(wx.VERTICAL)
+text = wx.StaticText(panel,label='Enter your name:')
+text2 = wx.TextCtrl(panel)
+btn = wx.Button(panel,label='Submit')
+sizer.Add(text,0,wx.ALL,10)
+sizer.Add(text2,0,wx.ALL|wx.EXPAND,10)
+sizer.Add(text,0,wx.ALL|wx.Center,10)
+panel.SetSizer(sizer)
+frame.Show()

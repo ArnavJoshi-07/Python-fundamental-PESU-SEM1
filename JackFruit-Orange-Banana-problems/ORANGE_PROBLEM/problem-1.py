@@ -1,8 +1,8 @@
 def create_address_book(names_txt_file: str, phone_txt_file: str):
     ''' Creates address book'''
     contacts_dict = {}
-    with (open(names_txt_file,'r') as f1, ## file with names
-        open(phone_txt_file,'r') as f2):  ## file with phone numbers
+    with (open(names_txt_file,'r') as f1,
+        open(phone_txt_file,'r') as f2):  
 
         names = [line.strip() for line in f1.readlines()]
         phones = [line.strip() for line in f2.readlines()]
@@ -11,10 +11,10 @@ def create_address_book(names_txt_file: str, phone_txt_file: str):
             name = names[i]
             phone = phones[i]
             contacts_dict[name] = phone
-        # print("Contacts Dictionary:",contacts_dict)
+        
 
     return contacts_dict
-# print(contacts_dict)
+
 
 
 def filter_dict(contacts_dict: dict) -> dict: 
@@ -51,15 +51,18 @@ def vowel_count(sorted_contact_dict:dict)-> dict:
 
 ### Function calls : 
 
-contacts_dict = create_address_book("JackFruit-Orange-Banana-problems\\ORANGE PROBLEM\\names.txt",
-                    "JackFruit-Orange-Banana-problems\\ORANGE PROBLEM\\phones.txt")
-
+contacts_dict = create_address_book("C:\\Users\\apurv\\VSC\\Python\\JackFruit-Orange-Banana-problems\\ORANGE_PROBLEM\\names.txt",
+                    "C:\\Users\\apurv\\VSC\\Python\\JackFruit-Orange-Banana-problems\\ORANGE_PROBLEM\\phones.txt")
+print(contacts_dict)
 filtered_dict = filter_dict(contacts_dict)
+print(filtered_dict)
 encypted_phno = reverse_encrypt_phno(filtered_dict)
+print(encypted_phno)
 sorted_contact_dict = sort_contacts_dict(encypted_phno, "secure_contacts.txt")
+print(sorted_contact_dict)
 vowel_count(sorted_contact_dict)
 
 
-# print(reversed_phno)
+
 
 
